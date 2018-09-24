@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('farbtastic/farbtastic.css') }}" type="text/css" />{% endblock %}
+
+{% block body %}
+<div class="ui segment">
+    <img id="logo" class="ui centered medium circular image" src="{{ asset('images/LogoBlack.png') }}" alt="Logo" />
+
+    <div id="colorpicker"></div>
+
+    <form action="" method="put">
+        <button class="ui button">
+            C'est parti
+        </button>
+    </form>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('farbtastic/farbtastic.js') }}"></script>
+
+    <script>
+        $('#colorpicker').farbtastic(function(color){
+            $('#logo').css({"background-color":color});
+        })
+    </script>
+{% endblock %}

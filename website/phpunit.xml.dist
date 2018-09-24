@@ -15,6 +15,13 @@
         <env name="APP_SECRET" value="s$cretf0rt3st" />
         <env name="SHELL_VERBOSITY" value="-1" />
         <!-- define your env variables for the test env here -->
+
+        <!-- ###+ endroid/twitter ### -->
+        <env name="TWITTER_CONSUMER_KEY" value=""/>
+        <env name="TWITTER_CONSUMER_SECRET" value=""/>
+        <env name="TWITTER_ACCESS_TOKEN" value=""/>
+        <env name="TWITTER_ACCESS_TOKEN_SECRET" value=""/>
+        <!-- ###- endroid/twitter ### -->
     </php>
 
     <testsuites>
